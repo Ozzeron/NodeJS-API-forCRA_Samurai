@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
     res.send('we are on \'\/\' ');
 });
 
-const PORT = process.env.PORT || 80
+const PORT = process.env.PORT || 80;
 
 
 // Listening the server
