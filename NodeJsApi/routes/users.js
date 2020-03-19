@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
         };
         const startIndex = (page - 1) * count;
         const endIndex = page * count;
-
+        console.log('all is ok',);
         const resultUsers = responseUsers.items.slice(startIndex, endIndex);
          (page!==undefined || count!==undefined)?res.json({"items":resultUsers,"totalCount":users.length}):res.json(users.slice(0,10));
     } catch (e) {
