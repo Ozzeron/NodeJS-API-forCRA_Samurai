@@ -42,7 +42,7 @@ const PORT = process.env.PORT || 80
 
 
 // Listening the server
-app.listen(4000, () => {
+app.listen(PORT, () => {
     console.log('API has started')
 });
 
