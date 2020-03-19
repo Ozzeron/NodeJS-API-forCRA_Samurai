@@ -18,6 +18,7 @@ router.get('/', async (req, res) => {
          (page!==undefined || count!==undefined)?res.json({"items":resultUsers,"totalCount":users.length}):res.json(users.slice(0,10));
     } catch (e) {
         res.json({message: e})
+        console.log(e);
     }
 });
 
