@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const bodyParser = require('body-parser');
-const cors  = require('cors');
+const cors = require('cors');
 require('dotenv/config');
 
 app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
@@ -19,6 +19,7 @@ app.use('/posts', postsRoute);
 app.use('/users', usersRoute);
 app.use('/profiles', profilesRoute);
 app.use('/auth', authRouter);
+
 
 //db connection
 mongoose.connect(
@@ -37,6 +38,9 @@ app.get('/', (req, res) => {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     res.send('we are on \'\/\' ');
 });
+
+app.use('/apidoc', express.static('apidoc'));
+
 
 const PORT = process.env.PORT || 80;
 

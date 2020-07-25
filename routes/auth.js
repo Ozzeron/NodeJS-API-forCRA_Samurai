@@ -13,7 +13,14 @@ let comonResObj = {
 
 };
 
-
+/**
+ *
+ * @api{get} /user Request User information
+ * @apiName GetUser
+ * @apiGroup User
+ *
+ * @apiSuccess {string} name The user name.
+ */
 router.get('/', (req,res)=>{
    try {
        res.send(comonResObj)
@@ -21,14 +28,6 @@ router.get('/', (req,res)=>{
        res.json({message: e} )
    }
 });
-
-
-
-
-
-
-
-
 
 
 module.exports = router;
