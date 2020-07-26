@@ -7,10 +7,10 @@
     "start": "nodemon app.js"
   },
   "apidoc": {
-    "name": "react-node-js-learning",
+    "name": "Ozzy API DOCUMENTATION",
     "version": "0.1.0",
     "description": "apiDoc basic example",
-    "title": "Custom apiDoc browser title",
+    "title": "Documentation for Ozzeron's Api",
     "url" : "https://api.github.com/v1"
   },
   "author": "",

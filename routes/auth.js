@@ -13,14 +13,6 @@ let comonResObj = {
 
 };
 
-/**
- *
- * @api{get} /user Request User information
- * @apiName GetUser
- * @apiGroup User
- *
- * @apiSuccess {string} name The user name.
- */
 router.get('/', (req,res)=>{
    try {
        res.send(comonResObj)
