@@ -18,6 +18,9 @@ const authRouter = require('./routes/auth');
 app.use('/posts', postsRoute);
 app.use('/users', usersRoute);
 app.use('/profiles', profilesRoute);
+app.use('/apidoc', express.static('apidoc')); // API doc url https://react-node-js-learning.herokuapp.com/apidoc
+
+
 app.use('/auth', authRouter);
 
 
@@ -31,15 +34,12 @@ mongoose.connect(
         console.log('connected to DB!')
     });
 
-
 //ROUTES
 app.get('/', (req, res) => {
     res.header("Access-Control-Allow-Origin", "http://localhost:3000");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     res.send('we are on \'\/\' ');
 });
-
-app.use('/apidoc', express.static('apidoc'));
 
 
 const PORT = process.env.PORT || 80;
