@@ -10,10 +10,9 @@ let comonResObj = {
         "email":"ozzeron@gmail.com"
     },
 
-
 };
 
-router.get('/', (req,res)=>{
+router.get('/me', (req,res)=>{
    try {
        res.send(comonResObj)
    } catch (e) {
